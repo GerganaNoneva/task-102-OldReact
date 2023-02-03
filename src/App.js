@@ -1,10 +1,10 @@
 import "./App.css";
-import React from 'react';
-import {motion} from "framer-motion/dist/framer-motion"
+import { motion } from "framer-motion/dist/framer-motion";
 
 function App() {
   return (
-    <motion.form
+    <div className="App">
+      <motion.form
         initial={{ x: "-100vw" }}
         animate={{
           x: "0",
@@ -14,8 +14,6 @@ function App() {
         }}
         transition={{ duration: 1 }}
       >
-      {/* Your form fields go here */
-      <form>
         <h1>Create An Account</h1>
         <label>
           Email:
@@ -26,10 +24,9 @@ function App() {
           <input name="password" type="password" required />
         </label>
         <button>Sign Up!</button>
-      </form>
-      }
-    </motion.form>
+      </motion.form>
+    </div>
   );
-};
+}
 
 export default App;
